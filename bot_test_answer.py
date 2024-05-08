@@ -4,9 +4,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait , Select
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.chrome.service import Service
 import time ,random
 
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(service=Service('../chromedriver.exe')) #add your path
 driver.get('https://www.google.com')
 actions = ActionChains(driver)
 Wait = WebDriverWait(driver, 20)
